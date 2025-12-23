@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="RadarControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LFS_SpeedMonitor"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="200"
+             Background="Transparent">
+    <Viewbox Stretch="Uniform">
+        <Grid Width="200" Height="200" Background="Transparent">
+            <!-- Transparent radar background for size reference -->
+            <Ellipse x:Name="radarBackground" 
+                     Width="180" Height="180" 
+                     Fill="Transparent"
+                     HorizontalAlignment="Center" 
+                     VerticalAlignment="Center"
+                     Opacity="0.5"/>
+
+            <!-- Canvas for car dots -->
+            <Canvas x:Name="carCanvas" 
+                    Width="180" Height="180" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    Background="Transparent"
+                    Opacity="0.5"/>
+
+            <!-- Player car (center rectangle) -->
+            <Rectangle x:Name="playerDot" 
+                       Width="10" Height="18" 
+                       Fill="#FF00BFFF" 
+                       Stroke="White" 
+                       StrokeThickness="1"
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center"
+                       Opacity="0.5"/>
+        </Grid>
+    </Viewbox>
+</UserControl>
